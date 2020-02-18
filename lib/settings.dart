@@ -16,7 +16,7 @@ class Settings extends StatelessWidget {
         backgroundColor: Colors.teal,
         title: Text('Settings'),
         leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: (){
-          Navigator.pushNamed(context, '/');
+          Navigator.pushNamed(context, '/home');
         }),
       ),
 //      drawer: DrawerMenu(),
