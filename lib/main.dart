@@ -4,8 +4,8 @@ import 'package:flutter_bloc_sample_app/settings.dart';
 import 'package:flutter_bloc_sample_app/settings_bloc.dart';
 
 void main() {
-  final BlocProvider <SettingsBloc> blocProvider = BlocProvider<SettingsBloc>(
-    create : (_) => SettingsBloc(),
+  final BlocProvider<SettingsBloc> blocProvider = BlocProvider<SettingsBloc>(
+    create: (_) => SettingsBloc(),
     child: MyApp(),
   );
   runApp(blocProvider);

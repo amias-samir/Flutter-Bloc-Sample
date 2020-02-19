@@ -16,11 +16,12 @@ class InitialSettingsState extends SettingsState {
       : super(sliderFontSize: 0.5, isBold: false, isItalic: false);
 }
 
-class NewSettingsState extends SettingsState {
-  NewSettingsState.fromOldSettingsState(SettingsState oldState,
+class NewSettingState extends SettingsState {
+  NewSettingState.fromOldSettingState(SettingsState oldState,
       {double sliderFontSize, bool isBold, bool isItalic})
       : super(
-            sliderFontSize: sliderFontSize ?? oldState.sliderFontSize,
-            isBold: isBold ?? oldState.isBold,
-            isItalic: isItalic ?? oldState.isItalic);
+    sliderFontSize: sliderFontSize ?? oldState.sliderFontSize,
+    isBold: isBold ?? oldState.isBold,
+    isItalic: isItalic ?? oldState.isItalic,
+  );
 }

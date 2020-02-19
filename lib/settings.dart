@@ -15,9 +15,6 @@ class Settings extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.teal,
         title: Text('Settings'),
-        leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: (){
-          Navigator.pushNamed(context, '/home');
-        }),
       ),
 //      drawer: DrawerMenu(),
       body: BlocBuilder<SettingsBloc, SettingsState>(
@@ -37,7 +34,7 @@ class Settings extends StatelessWidget {
                   min: 0.5,
                   value: state.sliderFontSize,
                   onChanged: (newValue) {
-                    settingsBloc.dispatch(FontSize(newValue));
+                    settingsBloc.add(FontSize(newValue));
                   }),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 8),
@@ -46,7 +43,7 @@ class Settings extends StatelessWidget {
                     Checkbox(
                       value: state.isBold,
                       onChanged: (newVal) {
-                        settingsBloc.dispatch(Bold(newVal));
+                        settingsBloc.add(Bold(newVal));
                       },
                     ),
                     Text(
@@ -63,7 +60,7 @@ class Settings extends StatelessWidget {
                     Checkbox(
                         value: state.isItalic,
                         onChanged: (newVal) {
-                          settingsBloc.dispatch(Italic(newVal));
+                          settingsBloc.add(Italic(newVal));
                         }),
                     Text(
                       'Italic',
